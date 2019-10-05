@@ -18,6 +18,14 @@ const TimetableStyle = styled.div`
         "time content content content content content"
         "time content content content content content"
     ;
+
+    /* Mobile */
+	@media screen and (max-width: 1000px) {
+        border-radius: 0;
+        margin: 0;
+        padding: 10px;
+        height: 100vh;
+	}
 `;
 
 const TableHeader = styled.div`
@@ -38,6 +46,12 @@ const TableHeader = styled.div`
     font-size: 2rem;
     font-family: sans-serif;
     letter-spacing: 1.5px;
+
+    /* Mobile */
+	@media screen and (max-width: 1000px) {
+        margin: 0;
+        font-size: 1.2rem;
+	}
 `;
 
 const TableTimes = styled.div`
@@ -59,6 +73,12 @@ const TableTimes = styled.div`
     font-size: 2rem;
     font-family: sans-serif;
     letter-spacing: 1.5px;
+
+    /* Mobile */
+	@media screen and (max-width: 1000px) {
+        margin: 0;
+        font-size: 1.2rem;
+	}
 `;
 
 const TableContent = styled.div`
@@ -86,6 +106,11 @@ const TableContent = styled.div`
     font-size: 1.5rem;
     font-family: sans-serif;
     letter-spacing: .5px;
+
+    /* Mobile */
+	@media screen and (max-width: 1000px) {
+        font-size: .8rem;
+	}
 `;
 
 export default TimetableStyle;
