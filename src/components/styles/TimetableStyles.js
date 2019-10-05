@@ -6,7 +6,7 @@ const TimetableStyle = styled.div`
     
     border-radius: 100px;
     margin: 40px;
-    padding: 25px;
+    padding: 20px;
 
     display: grid;
     grid-template-areas:
@@ -22,6 +22,7 @@ const TimetableStyle = styled.div`
     /* Half-desktop */
 	@media screen and (max-width: 1000px) {
         border-radius: 0;
+        background-color: rgba(255, 255, 255, 0);
         margin: 0;
         padding: 10px;
         height: 100vh;
@@ -31,6 +32,7 @@ const TimetableStyle = styled.div`
     /* Mobile */
 	@media screen and (max-width: 850px) {
         border-radius: 0;
+        background-color: rgba(255, 255, 255, 0);
         margin: 0;
         padding: 10px;
         height: 100vh;
@@ -74,6 +76,7 @@ const TableTimes = styled.div`
     /* Positioning */
     grid-area: time;
     margin: 20px;
+    z-index: 2;
 
     /* Grid */
     display: grid;
@@ -122,10 +125,11 @@ const TableContent = styled.div`
     backdrop-filter: blur(50px);
     background-color: rgba(255, 255, 255, .2);
     border-radius: 50px;
+    overflow: hidden; /* Clipping what's over the border-radius */
 
     /* Typography */
     color: lightseagreen;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: sans-serif;
     letter-spacing: .5px;
 
@@ -146,5 +150,18 @@ const TableContent = styled.div`
 	}
 `;
 
+const Day = styled.div`
+    align-self: stretch;
+    justify-self: stretch;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .45);
+    }
+`;
+
 export default TimetableStyle;
-export { TableHeader, TableTimes, TableContent };
+export { TableHeader, TableTimes, TableContent, Day };

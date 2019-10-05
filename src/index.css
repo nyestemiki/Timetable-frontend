@@ -2,8 +2,20 @@
 	box-sizing: border-box;
 }
 
-body {
+body, html {
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
+	height: 100vh;
+	width: 100vw;
+}
+
+body {
 	background: lightsalmon;
+}
+
+.selected_btn {
+	box-sizing: border-box;
+	border: 1px solid lightseagreen;
+	background-color: white !important;
 }

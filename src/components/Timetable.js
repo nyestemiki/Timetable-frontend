@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import TimetableStyle, { TableHeader, TableTimes, TableContent } from './styles/TimetableStyles';
+import TimetableStyle, { TableHeader, TableTimes, TableContent, Day } from './styles/TimetableStyles';
 
 export default class Timetable extends Component {
     render() {
+        let days = [];
+        for (let d = 0; d < 30; d++) {
+            days.push(<Day key={d}></Day>);
+        }
+
         return (
             <TimetableStyle>
                 <TableHeader>
@@ -21,36 +26,7 @@ export default class Timetable extends Component {
                     <div>6-8</div>
                 </TableTimes>
                 <TableContent>
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-                    
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
+                    {days.map(day => day)}
                 </TableContent>
             </TimetableStyle>
         )
