@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 const TimetableStyle = styled.div`
-    /* DEV  */
-    background: blue;
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, .35);
     
-    margin: 40px;
     border-radius: 100px;
-
+    margin: 40px;
     padding: 25px;
 
     display: grid;
@@ -22,24 +21,31 @@ const TimetableStyle = styled.div`
 `;
 
 const TableHeader = styled.div`
+    /* Positioning */
     grid-area: head;
-    border: 2px solid white;
     margin: 20px;
+
+    /* Grid */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    color: white;
     place-items: center; /* Center both vertically and horizontally */
     align-content: stretch;
     justify-content: space-between;
     grid-gap: 20px;
 
-    & > * {
-        border: 2px solid red;
-    }
+    /* Typography */
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
 `;
 
 const TableTimes = styled.div`
+    /* Positioning */
     grid-area: time;
+    margin: 20px;
+
+    /* Grid */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
@@ -47,35 +53,39 @@ const TableTimes = styled.div`
     align-content: stretch;
     justify-content: space-between;
     grid-gap: 20px;
-    color: white;
-    margin: 20px;
 
-    border: 1px solid orange;
-
-    & > * {
-        border: 2px solid red;
-    }
+    /* Typography */
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
 `;
 
 const TableContent = styled.div`
+    /* Positioning */
     grid-area: content;
     margin: 20px;
+    height: calc(100% - 2*20px);
+
+    /* Grid */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
     place-items: center; /* Center both vertically and horizontally */
     align-content: stretch;
     justify-content: space-between;
-    height: calc(100% - 2*20px);
-
     grid-gap: 20px;
-    color: white;
 
-    border: 1px solid yellow;
+    /* Style */
+    backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 50px;
 
-    & > * {
-        border: 2px solid red;
-    }
+    /* Typography */
+    color: lightseagreen;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    letter-spacing: .5px;
 `;
 
 export default TimetableStyle;
