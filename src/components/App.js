@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Timetale from './Timetable';
 import Display from './Display';
+import Edit from './Edit';
 
 const MainScreen = styled.div`
 	width: 100vw;
@@ -29,12 +30,19 @@ const MainScreen = styled.div`
 `;
 
 export default class App extends Component {
+	state = {
+		edit: false
+	}
+
 	render() {
 		return (
-			<MainScreen>
-				<Timetale/>
-				<Display/>
-			</MainScreen>
+			<>
+				<MainScreen>
+					<Timetale/>
+					<Display/>
+				</MainScreen>
+				<Edit active={this.state.edit}/>
+			</>
 		)
 	}
 }
