@@ -35,6 +35,7 @@ const X = styled.div`
     justify-content: center;
     color: rgba(0, 0, 0, 0.75);
     font-weight: 100;
+    cursor: pointer;
 `;
 
 export default EditStyle;

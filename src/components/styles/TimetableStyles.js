@@ -150,18 +150,5 @@ const TableContent = styled.div`
 	}
 `;
 
-const Day = styled.div`
-    align-self: stretch;
-    justify-self: stretch;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        background-color: rgba(255, 255, 255, .45);
-    }
-`;
-
 export default TimetableStyle;
-export { TableHeader, TableTimes, TableContent, Day };
+export { TableHeader, TableTimes, TableContent };

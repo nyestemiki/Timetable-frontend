@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import TimetableStyle, { TableHeader, TableTimes, TableContent, Day } from './styles/TimetableStyles';
+import TimetableStyle, { TableHeader, TableTimes, TableContent } from './styles/TimetableStyles';
+import Interval from './Interval';
 
 export default class Timetable extends Component {
     render() {
-        let days = [];
+        let intervals = [];
         for (let d = 0; d < 30; d++) {
-            days.push(<Day 
+            intervals.push(<Interval 
                 key={d}
-                onClick={() => {
-                    this.props.editDay(d)
-                }}    
-            ></Day>);
+                id={d}
+                editInterval={this.props.editInterval}    
+            ></Interval>);
         }
 
         return (
@@ -31,7 +31,7 @@ export default class Timetable extends Component {
                     <div>6-8</div>
                 </TableTimes>
                 <TableContent>
-                    {days.map(day => day)}
+                    {intervals.map(interval => interval)}
                 </TableContent>
             </TimetableStyle>
         )

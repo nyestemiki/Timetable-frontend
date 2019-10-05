@@ -32,20 +32,20 @@ const MainScreen = styled.div`
 export default class App extends Component {
 	state = {
 		edit: false,
-		editingDay: ''
+		editingInterval: ''
 	}
 
-	editDay = day => {
+	editInterval = intervalId => {
 		this.setState({ 
 			edit: true,
-			editingDay: day
+			editingInterval: intervalId
 		});
 	}
 
 	closeEditMenu = () => {
 		this.setState({ 
 			edit: false,
-			editingDay: ''
+			editingInterval: ''
 		});
 	}
 
@@ -53,9 +53,9 @@ export default class App extends Component {
 		return (
 			<>
 				<MainScreen>
-					<Timetale editDay={this.editDay}/>
+					<Timetale editInterval={this.editInterval}/>
 					{/* Hiding the display menu if editing on a phone */}
-					{!(this.state.edit && window.screen.width < 850) && <Display/>}
+					{!(this.state.edit && window.screen.width <= 1000) && <Display/>}
 				</MainScreen>
 				<Edit 
 					active={this.state.edit}
