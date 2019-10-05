@@ -39,12 +39,20 @@ const DisplayStyleContainer = styled.div`
 
 const Area = styled.div`
     margin: 25px;
+
+    @media screen and (max-width: 850px) {
+        margin: 5px;
+    }
 `;
 
 const AreaTitle = styled.div`
     color: white;
     font-size: 1.5rem;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 850px) {
+        font-size: .75rem;
+    }
 `;
 
 const Buttons = styled.div`
@@ -68,6 +76,11 @@ const Button = styled.div`
     &:hover, &:focus {
         background-color: rgba(255, 255, 255, 0.85);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (max-width: 850px) {
+        font-size: .65rem;
+        margin: 2px;
     }
 `;
 
