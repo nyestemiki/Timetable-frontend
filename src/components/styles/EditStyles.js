@@ -26,7 +26,7 @@ const X = styled.div`
     right: 0;
     width: 75px;
     height: 75px;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.55);
     border-radius: 100%;
     margin: 10px;
     font-size: 50px;
@@ -36,6 +36,16 @@ const X = styled.div`
     color: rgba(0, 0, 0, 0.75);
     font-weight: 100;
     cursor: pointer;
+
+    &:hover, &:focus {
+        box-shadow: 0 0 15px orangered;
+        background: rgba(255, 255, 255, 0.75);
+    }
+
+    &:active {
+        box-shadow: 0 0 20px orangered;
+        background: rgba(255, 255, 255, 0.85);
+    }
 `;
 
 export default EditStyle;

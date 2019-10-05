@@ -55,7 +55,7 @@ const TableHeader = styled.div`
 
     /* Typography */
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: sans-serif;
     letter-spacing: 1.5px;
 
@@ -89,7 +89,7 @@ const TableTimes = styled.div`
 
     /* Typography */
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: sans-serif;
     letter-spacing: 1.5px;
 
@@ -129,7 +129,7 @@ const TableContent = styled.div`
 
     /* Typography */
     color: lightseagreen;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: sans-serif;
     letter-spacing: .5px;
 

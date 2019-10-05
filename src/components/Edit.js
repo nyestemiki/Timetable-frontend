@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import EditStyle, { MiddleWrapper, X } from './styles/EditStyles';
-import Display from './Display';
+import EditContainer from './EditContainer';
 
 export default class Edit extends Component {
     render() {
@@ -9,7 +9,7 @@ export default class Edit extends Component {
             <EditStyle>
                 <X onClick={this.props.closeEditMenu}>X</X>
                 <MiddleWrapper>
-                    <Display/>
+                    <EditContainer/>
                 </MiddleWrapper>
             </EditStyle>)
         )

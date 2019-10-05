@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const DisplayStyle = styled.div`
+const EditContainerStyle = styled.div`
     display: flex;
     flex-direction: column;
 
@@ -23,7 +23,7 @@ const DisplayStyle = styled.div`
 	}  
 `;
 
-const DisplayStyleContainer = styled.div`    
+const EditContainerStyleContainer = styled.div`    
     flex: 1;
     margin: 40px;
     border-radius: 100px;
@@ -46,7 +46,7 @@ const Area = styled.div`
 `;
 
 const AreaTitle = styled.div`
-    color: white;
+    color: rgba(0, 0, 0, 0.6);
     font-size: 1rem;
     margin-bottom: 5px;
 
@@ -56,6 +56,37 @@ const AreaTitle = styled.div`
 
     @media screen and (max-width: 850px) {
         font-size: .5rem;
+    }
+`;
+
+const TextInput = styled.textarea`
+    font-size: 1rem;
+    color: lightseagreen;
+    background-color: rgba(255, 255, 255, 0.45);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 25px;
+    flex: 1;
+    text-align: center;
+    transition: all .3s;
+    width: 100%;
+    resize: none;
+    height: 5vh;
+    overflow: hidden;
+    outline: none;
+
+    &:hover, &:focus {
+        background-color: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 0 15px lightseagreen;
+    }
+
+    &:active {
+        box-shadow: 0 0 20px lightseagreen;
+    }
+
+    @media screen and (max-width: 850px) {
+        font-size: .65rem;
+        margin: 2px;
     }
 `;
 
@@ -96,13 +127,14 @@ const Button = styled.div`
     }
 `;
 
-const ButtonAbsence = styled.div`
+const Delete = styled.div`
+    box-sizing: border-box;
     cursor: pointer;
     font-size: 1rem;
-    color: lightseagreen;
     background-color: rgba(255, 255, 255, 0.45);
+    color: red;
     padding: 20px;
-    margin-bottom: 40px;
+    margin: 10px;
     border-radius: 25px;
     flex: 1;
     text-align: center;
@@ -110,42 +142,22 @@ const ButtonAbsence = styled.div`
 
     &:hover, &:focus {
         background-color: rgba(255, 255, 255, 0.85);
-        box-shadow: 0 0 15px lightseagreen;
+        box-shadow: 0 0 15px red;
     }
 
     &:active {
-        box-shadow: 0 0 20px lightseagreen;
+        box-shadow: 0 0 20px red;
     }
 
     @media screen and (max-width: 1000px) {
-        font-size: 1rem;
+        font-size: .85rem;
+    }
+
+    @media screen and (max-width: 850px) {
+        font-size: .65rem;
+        margin: 2px;
     }
 `;
 
-const Options = styled.select`
-    font-size: 1rem;
-    color: lightseagreen;
-    background-color: rgba(255, 255, 255, 0.45);
-    height: 50px;
-    border-radius: 25px;
-    width: 100%;
-    text-align: center;
-    outline: none;
-    transition: all .3s;
-
-    &:hover, &:focus {
-        background-color: rgba(255, 255, 255, 0.85);
-        box-shadow: 0 0 15px lightseagreen;
-    }
-
-    &:active {
-        box-shadow: 0 0 20px lightseagreen;
-    }
-
-    @media screen and (max-width: 1000px) {
-        font-size: 1rem;
-    }
-`;
-
-export default DisplayStyle;
-export { DisplayStyleContainer, Area, AreaTitle, Buttons, Button, ButtonAbsence, Options };
+export default EditContainerStyle;
+export { EditContainerStyleContainer, Area, AreaTitle, TextInput, Buttons, Button, Delete };
