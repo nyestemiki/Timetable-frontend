@@ -5,7 +5,12 @@ export default class Timetable extends Component {
     render() {
         let days = [];
         for (let d = 0; d < 30; d++) {
-            days.push(<Day key={d}></Day>);
+            days.push(<Day 
+                key={d}
+                onClick={() => {
+                    this.props.editDay(d)
+                }}    
+            ></Day>);
         }
 
         return (

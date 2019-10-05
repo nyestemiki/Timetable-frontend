@@ -31,17 +31,36 @@ const MainScreen = styled.div`
 
 export default class App extends Component {
 	state = {
-		edit: false
+		edit: false,
+		editingDay: ''
+	}
+
+	editDay = day => {
+		this.setState({ 
+			edit: true,
+			editingDay: day
+		});
+	}
+
+	closeEditMenu = () => {
+		this.setState({ 
+			edit: false,
+			editingDay: ''
+		});
 	}
 
 	render() {
 		return (
 			<>
 				<MainScreen>
-					<Timetale/>
-					<Display/>
+					<Timetale editDay={this.editDay}/>
+					{/* Hiding the display menu if editing on a phone */}
+					{!(this.state.edit && window.screen.width < 850) && <Display/>}
 				</MainScreen>
-				<Edit active={this.state.edit}/>
+				<Edit 
+					active={this.state.edit}
+					closeEditMenu={this.closeEditMenu}	
+				/>
 			</>
 		)
 	}
