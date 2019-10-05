@@ -19,12 +19,22 @@ const TimetableStyle = styled.div`
         "time content content content content content"
     ;
 
-    /* Mobile */
+    /* Half-desktop */
 	@media screen and (max-width: 1000px) {
         border-radius: 0;
         margin: 0;
         padding: 10px;
         height: 100vh;
+        width: 100vw;
+    }
+    
+    /* Mobile */
+	@media screen and (max-width: 850px) {
+        border-radius: 0;
+        margin: 0;
+        padding: 10px;
+        height: 100vh;
+        width: 100vw;
 	}
 `;
 
@@ -47,10 +57,16 @@ const TableHeader = styled.div`
     font-family: sans-serif;
     letter-spacing: 1.5px;
 
-    /* Mobile */
+    /* Half-desktop */
 	@media screen and (max-width: 1000px) {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
+	}
+    
+    /* Mobile */
+	@media screen and (max-width: 850px) {
+        margin: 0;
+        font-size: .5rem;
 	}
 `;
 
@@ -74,10 +90,16 @@ const TableTimes = styled.div`
     font-family: sans-serif;
     letter-spacing: 1.5px;
 
-    /* Mobile */
+    /* Half-desktop */
 	@media screen and (max-width: 1000px) {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    /* Mobile */
+	@media screen and (max-width: 850px) {
+        margin: 0;
+        font-size: .5rem;
 	}
 `;
 
@@ -107,9 +129,20 @@ const TableContent = styled.div`
     font-family: sans-serif;
     letter-spacing: .5px;
 
-    /* Mobile */
+    /* Half-desktop */
 	@media screen and (max-width: 1000px) {
-        font-size: .8rem;
+        margin: 0;
+        height: 100%;
+        font-size: .75rem;
+        grid-gap: 10px;
+    }
+    
+    /* Mobile */
+	@media screen and (max-width: 850px) {
+        margin: 0;
+        height: 100%;
+        font-size: .35rem;
+        grid-gap: 5px;
 	}
 `;
 

@@ -17,8 +17,13 @@ const MainScreen = styled.div`
 		margin-left: auto;
 	}
 
-	/* Mobile */
+	/* Half-desktop */
 	@media screen and (max-width: 1000px) {
+		grid-template-columns: 1fr;
+	}
+
+	/* Mobile */
+	@media screen and (max-width: 850px) {
 		grid-template-columns: 1fr;
 	}
 `;
