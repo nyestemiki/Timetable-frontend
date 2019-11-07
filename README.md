@@ -21,9 +21,13 @@
 
 3. Login (multi-user support)
     - basic login screen
+    - token
 
 4. React Animations  
 
 5. Welcome screen
     - presentation of the application
     - login/signup
+
+
+- offline view-only
