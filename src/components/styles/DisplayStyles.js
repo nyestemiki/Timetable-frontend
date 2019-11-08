@@ -75,7 +75,6 @@ const Button = styled.div`
     border-radius: 25px;
     flex: 1;
     text-align: center;
-    transition: all .3s;
 
     &:hover, &:focus {
         background-color: rgba(255, 255, 255, 0.85);

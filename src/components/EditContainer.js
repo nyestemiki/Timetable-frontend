@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EditContainerStyle, { EditContainerStyleContainer, Area, AreaTitle, TextInput, Buttons, Button, Delete, Save } from './styles/EditContainerStyles';
+import EditContainerStyle, { EditContainerStyleContainer, Area, AreaTitle, TextInput, Buttons, Button, Delete } from './styles/EditContainerStyles';
 
 export default class EditContainer extends Component {
     render() {
